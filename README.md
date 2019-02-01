@@ -1,2 +1,0 @@
-# ButtonIncrementSandboxText
-Created with CodeSandbox
