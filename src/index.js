@@ -1,13 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Button from "./components/Button";
 
 import "./styles.css";
 
 function App() {
+  let count = 0;
+
+  const incrementCount = increment => {
+    // TODO
+  };
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Button increment={1} onClickFunction={incrementCount} />
+      <Button increment={10} onClickFunction={incrementCount} />
+      <Button increment={100} onClickFunction={incrementCount} />
+      <Button increment={1000} onClickFunction={incrementCount} />
+      <span>{count}</span>
     </div>
   );
 }
