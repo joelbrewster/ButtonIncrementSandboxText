@@ -11,6 +11,10 @@ function App() {
     setCount(count + increment)
   }
 
+  const decrementCount = increment => {
+    setCount(count - increment)
+  }
+
   const incrementReset = () => {
     setCount(0)
   }
@@ -22,10 +26,16 @@ function App() {
         <span>Current counter is: {count}</span>
       </div>
       <div>
-        <Button increment={1} onClickFunction={incrementCount} />
-        <Button increment={10} onClickFunction={incrementCount} />
-        <Button increment={100} onClickFunction={incrementCount} />
-        <Button increment={1000} onClickFunction={incrementCount} />
+        <Button prefix="+" increment={1} onClickFunction={incrementCount} />
+        <Button prefix="+" increment={10} onClickFunction={incrementCount} />
+        <Button prefix="+" increment={100} onClickFunction={incrementCount} />
+        <Button prefix="+" increment={1000} onClickFunction={incrementCount} />
+      </div>
+      <div>
+        <Button prefix="-" increment={1} onClickFunction={decrementCount} />
+        <Button prefix="-" increment={10} onClickFunction={decrementCount} />
+        <Button prefix="-" increment={100} onClickFunction={decrementCount} />
+        <Button prefix="-" increment={1000} onClickFunction={decrementCount} />
       </div>
       <div>
         <Button increment="Click to reset" onClickFunction={incrementReset} />
